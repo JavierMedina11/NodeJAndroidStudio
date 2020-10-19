@@ -74,17 +74,69 @@ exports.findOne = (req, res) => {
     });
 };
 
-// Update a Tutorial by the id in the request
+// Update a Bicycle by the id in the request
 exports.update = (req, res) => {
-  
+  const id = req.params.id;
+
+  Bicycle.update(req.body, {
+    where: { id: id }
+  })
+    .then(num => {
+      if (num == 1) {
+        res.send({
+          message: "Bicycle was updated successfully."
+        });
+      } else {
+        res.send({
+          message: `Cannot update Bicycle with id=${id}. Maybe Bicycle was not found or req.body is empty!`
+        });
+      }
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Error updating Bicycle with id=" + id
+      });
+    });
 };
 
 // Delete a Tutorial with the specified id in the request
 exports.delete = (req, res) => {
-  
+  const id = req.params.id;
+
+  Bicycle.destroy({
+    where: { id: id }
+  })
+    .then(num => {
+      if (num == 1) {
+        res.send({
+          message: "Bicycle was deleted successfully!"
+        });
+      } else {
+        res.send({
+          message: `Cannot delete Bicycle with id=${id}. Maybe Bicycle was not found!`
+        });
+      }
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Could not delete Bicycle with id=" + id
+      });
+    });
 };
 
-// Delete all Tutorials from the database.
+// Delete all Bicycles from the database.
 exports.deleteAll = (req, res) => {
-  
+  Bicycle.destroy({
+    where: {},
+    truncate: false
+  })
+    .then(nums => {
+      res.send({ message: `${nums} Bicycles were deleted successfully!` });
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while removing all Bicycles."
+      });
+    });
 };
