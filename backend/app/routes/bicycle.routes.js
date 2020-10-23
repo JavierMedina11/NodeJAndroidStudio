@@ -3,22 +3,22 @@ module.exports = app => {
   
     var router = require("express").Router();
   
-    // Create a new Bicycle
+    // Create a new travel
     router.post("/", bicycles.create);
   
-    // Retrieve all Bicycles
+    // Retrieve all travels
     router.get("/", bicycles.findAll);
   
-    // Retrieve a single bicycle with id
+    // Retrieve a single travel with id
     router.get("/:id", bicycles.findOne);
   
-    // Update a bicycle with id
+    // Update a travel with id
     router.put("/:id", bicycles.update);
   
-    // Delete a bicycle with id
+    // Delete a travel with id
     router.delete("/:id", bicycles.delete);
   
-    // Delete all bicycles
+    // Delete all travels
     router.delete("/", bicycles.deleteAll);
   
     app.use('/api/travels', router);
