@@ -22,7 +22,7 @@ const db = require("./app/models");
 
 db.sequelize.sync();
 
-require("./app/routes/bicycle.routes")(app);
+require("./app/routes/travel.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
