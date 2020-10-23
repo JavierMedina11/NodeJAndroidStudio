@@ -118,7 +118,7 @@ class TravelDetailActivity : AppCompatActivity() {
 
                 val txt_brand: TextInputEditText = findViewById(R.id.TextInputEditTextBrand)
                 val txt_model: TextInputEditText = findViewById(R.id.TextInputEditTextModel)
-                val img: ImageView = findViewById(R.id.imageViewBicycleDetail)
+                val img: ImageView = findViewById(R.id.imageViewTravelDetail)
 
                 txt_brand.setText(response?.name ?: "")
                 txt_model.setText(response?.descripcion ?: "")

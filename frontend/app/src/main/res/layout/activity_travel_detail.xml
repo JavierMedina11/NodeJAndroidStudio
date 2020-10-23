@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewBicycleDetail"
+        android:id="@+id/imageViewTravelDetail"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -64,13 +64,13 @@
         app:layout_constraintBottom_toTopOf="@+id/textInputLayoutModel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewBicycleDetail">
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTravelDetail">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TextInputEditTextBrand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Brand"
+            android:hint="Name"
             android:enabled="false"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,7 +92,7 @@
             android:id="@+id/TextInputEditTextModel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Model"
+            android:hint="Descripcion"
             android:enabled="false"/>
     </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

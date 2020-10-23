@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/imageViewBicycle"
+        android:id="@+id/imageViewTravel"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="@dimen/fab_margin"

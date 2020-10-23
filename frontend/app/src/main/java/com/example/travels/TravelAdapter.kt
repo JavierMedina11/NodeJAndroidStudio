@@ -34,7 +34,7 @@ class TravelAdapter(var travelList: ArrayList<Travels>, val context: Context) : 
             val url = "http://192.168.0.10:8080/img/travels-"
             val txt_brand: TextView = itemView.findViewById(R.id.textViewBrand)
             val txt_model: TextView = itemView.findViewById(R.id.textViewModel)
-            val img: ImageView = itemView.findViewById(R.id.imageViewBicycle)
+            val img: ImageView = itemView.findViewById(R.id.imageViewTravel)
 
             txt_brand.text = b.name
             txt_model.text = b.descripcion
